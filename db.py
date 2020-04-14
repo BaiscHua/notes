@@ -12,11 +12,6 @@ from contextlib import contextmanager
 PRAGMA_SETTINGS = {
     'auto_vacuum': 1,  # FULL
     'cache_size': 1 << 13,  # 8,192 pages
-    # DELETE	默认模式。在该模式下，在事务结束时，日志文件将被删除
-    # TRUNCATE	日志文件被阶段为零字节长度
-    # PERSIST	日志文件被留在原地，但头部被重写，表明日志不再有效
-    # MEMORY	日志记录保留在内存中，而不是磁盘上
-    # OFF	    不保留任何日志记录
     'journal_mode': 'wal',
     # Query or change the value of the sqlite3_limit(db,SQLITE_LIMIT_WORKER_THREADS,...) limit for the current database connection. This limit sets an upper bound on the number of auxiliary threads that a prepared statement is allowed to launch to assist with a query. The default limit is 0 unless it is changed using the SQLITE_DEFAULT_WORKER_THREADS compile-time option. When the limit is zero, that means no auxiliary threads will be launched.
     #
